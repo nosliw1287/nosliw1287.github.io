@@ -1,0 +1,751 @@
+@import bourbon/bourbon
+@import base/base
+@import "compass/css3/background-size"
+
+$white: #fff
+$lightGray: #333333
+$blue: #008AB8
+$lighterGray: #808080
+$darkgray: #292626
+
+$aqua: #7FD8FF
+$navy: #001F3F
+$teal: #39CCCC
+$green: #2ECC40
+$olive: #3D9970
+$lime: #01FF70
+
+$yellow: #FFDC00
+$orange: #FF851B
+$red: #FF4136
+$fushcia: #F012BE
+$purple: #810DC9
+$maroon: #85144B
+$coral: #ea6153
+
+$white: #fff
+$silver: #ddd
+$gray: #aaa
+$black: #111
+$bgcolor: #e5eaee
+
+body
+	margin: 0px
+	font-family: 'Open Sans', sans-serif
+
+
+
+.main
+	height: 100%
+	background: $white
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+
+
+
+.project-lockup
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	max-width: 50%
+	max-height: 50%
+	margin: 50px auto
+
+
+
+
+.photo-container
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+
+.header
+	display: flex
+	justify-content: space-between
+	width: 100%
+
+nav
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	background: $darkgray
+	
+
+	.logo
+		margin: 5px
+		height: 25px
+		width: 25px
+
+	ul
+		display: flex
+
+
+		li
+			list-style-type: none
+			margin: 0 20px
+			justify-content: space-between
+
+	input.text
+		margin: 10px 
+
+	
+
+.navbar
+	color: lighten($lighterGray, 25%)
+	font-size: 15px
+	text-decoration: none
+
+	
+.navbar:hover
+	color: $coral
+
+.socialButtons
+
+	background: $lighterGray
+	border-radius: 25px
+	border-color: $lighterGray
+	border-style: solid
+	margin: 5px
+
+.socialButtons:hover
+	background: $teal
+	border-color: $teal
+
+
+h1
+	font-family: 'Lobster', cursive
+	font-size: 80px
+	font-weight: 300
+	color: $teal
+	text-align: center
+	clear: both
+	
+	
+h2
+	font-family: 'Open Sans', sans-serif
+	font-size: 36px
+	color: $teal
+	text-align: center
+	clear: both
+	margin-top: -60px
+	
+
+h3
+	color: $teal
+	font-family: 'Fira-Sans', sans-serif
+	padding-top: 20px
+
+h4
+	color: $teal
+	font-family: 'Fira-Sans', sans-serif
+	font-size: 20px
+	font-weight: 700
+	clear: both
+	padding-left: 50px
+	padding-right: 50px
+
+a
+	color: $teal
+	text-decoration: none
+
+	&:hover
+		color: $lightGray
+
+
+.section
+	padding-top: 25px
+	padding-bottom: 10px
+	font-size: 1.5em
+	text-align: center
+	text-transform: uppercase
+	color: $teal
+	letter-spacing: .5em
+	margin: 50px
+
+.hero-image
+	position: relative
+	height: 960px
+	background: 
+		image: url('./images/simon.JPG')
+		opacity: .3
+		size: cover
+		position: top center
+		attachment: fixed
+		repeat: no-repeat
+
+.kwmlogo
+	height: 200px
+	width: 673px
+	
+	background:
+	
+		image: url('./images/kwm-header-logo-black.png')
+		posiiton: center
+		
+		repeat: no-repeat
+	position: absolute
+	top: 50%
+	margin-top: -150px
+	margin-left: 550px
+
+
+.fore-bird
+	width: 301px
+	height: 200px
+	background:
+		
+		image: url('./images/fore-bird.png')
+		repeat: no-repeat
+		position: top left
+		
+	position: absolute
+	left: 50%
+	margin-left: -650px
+	margin-top: -750px
+
+	
+
+
+.alt-section
+	background: $coral
+
+.orange-section
+	background: lighten($orange, 10%)
+
+.teal-section
+	background: $teal
+
+.work-section
+	overflow-x: hidden
+
+.resume-section
+	background: $teal
+	display: flex
+	flex-direction: column
+	justify-content: center
+	max-width: 960px
+	margin: 0px auto
+	margin-bottom: 20px
+	+clearfix
+	
+		
+.thumb-wrap
+	width: 50%
+	float: left
+
+.work-wrap
+	width: 50%
+	float: left
+
+.work-belt
+	width: 200%
+	position: relative
+	left: 0%
+	+transition(all 800ms)
+
+	.work-container
+		max-width: 600px
+		margin: 0px auto
+		display: none
+
+		img
+			max-width: 100%
+			margin-bottom: 20px
+
+		h4
+			color: $lightGray
+			font-weight: 400
+			text-transform: uppercase
+			font-size: 24px
+			line-height: 1.2
+			color: $teal
+
+		.work-return
+			+size(40px)
+			cursor: pointer
+			opacity: 0.5
+		
+			&:hover
+				opacity: 1
+
+		
+
+
+
+
+	.thumb-container
+		max-width: 960px
+		margin: 0px auto
+		margin-bottom: 120px
+		+clearfix
+
+	.thumb-unit
+		display: block
+		width: 25%
+		height: 150px
+		float: left
+		
+		position: relative
+		overflow: hidden
+	
+		background-image: url('./images/thumb-unit/1.png')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+
+		+perspective(300)
+
+
+		.overlay
+			+position(absolute 100% 0px null 0px)
+			height: 100%
+			background: fade-out($coral, 0.1)
+			text-align: center
+			+transition
+			+display(flex)
+			+align-items(center)
+			+justify-content(space-around)
+			+transform(rotateY(90deg))
+			+transform-origin(center bottom)
+
+			strong
+				display: block
+				padding: 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				size: 24px
+				line-height: 1.2
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 20%
+
+			
+		&:hover .overlay
+			+position(absolute 0% 0px null 0px)
+			+transform(rotateX(0deg))
+
+	.thumb-unit2
+		display: block
+		width: 25%
+		height: 150px
+		float: left
+		position: relative
+		overflow: hidden
+		
+		background-image: url('./images/etiquette_dinner.png')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		+perspective(300)
+
+		.overlay
+			+position(absolute 100% 0px null 0px)
+			height: 100%
+			background: fade-out($coral, 0.1)
+			text-align: center
+			+transition
+			+display(flex)
+			+align-items(center)
+			+justify-content(space-around)
+			+transform(rotateY(90deg))
+			+transform-origin(center bottom)
+
+			strong
+				display: block
+				padding: 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				size: 24px
+				line-height: 1.2
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 20%
+
+			
+		&:hover .overlay
+			+position(absolute 0% 0px null 0px)
+			+transform(rotateX(0deg))
+
+	.thumb-unit3
+		display: block
+		width: 25%
+		height: 150px
+		float: left
+		position: relative
+		overflow: hidden
+		
+		background-image: url('./images/portfolio/2.jpg')
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+		+perspective(300)
+
+		.overlay
+			+position(absolute 100% 0px null 0px)
+			height: 100%
+			background: fade-out($coral, 0.1)
+			text-align: center
+			+transition
+			+display(flex)
+			+align-items(center)
+			+justify-content(space-around)
+			+transform(rotateY(90deg))
+			+transform-origin(center bottom)
+
+			strong
+				display: block
+				padding: 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				size: 24px
+				line-height: 1.2
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 20%
+
+			
+		&:hover .overlay
+			+position(absolute 0% 0px null 0px)
+			+transform(rotateX(0deg))
+
+
+.upArrow
+	display: inline
+	height: 25px
+	width: 25px
+	padding-left: 50px
+	
+
+.back-arrow
+	display: inline
+	height: 50px
+	width: 50px
+	padding-left: 50px
+	padding-top: 25px
+
+.aboutme
+	display: flex
+	flex-direction: column
+	justify-content: center
+	padding: 10px
+	color: $lightGray
+	max-width: 720px
+	margin: 0 auto
+
+	
+	.label
+		text-align: center
+		text-transform: uppercase
+		color: $teal
+		letter-spacing: .5em
+
+
+	
+	
+
+	.face-lockup
+		display: flex
+		justify-content: space-around
+		+align-items(center)
+		
+		
+		
+
+		.avatar
+			+size(200px)
+			+order(3)
+
+
+		.icons-pen
+			+order(5)
+			color: white
+		.icons-bulb
+			+order(2)
+		.icons-display
+			+order(4)
+		.icons-camera
+			+order(1)
+
+.blurb
+	display: flex
+	+align-items(center)
+	max-width: 600px
+	padding: 10px
+	margin: 0 auto
+	font-size: 24px
+	text-align: center
+
+
+.skills-lockup
+	max-width: 600px
+	margin: 50px auto 
+	padding-left: 75px
+	color: lighten($lightGray, 30%)
+	+clearfix()
+
+	.skill-unit
+		width: 270px
+		float: left
+
+	.skill-icons
+		font-size: 0
+		margin: 0px 0 30px
+		
+		span
+			display: inline-block
+			+size(14px)
+			background-color: $teal
+			margin-right: 5px
+			border-radius: 50%
+
+
+			&:after
+				content: ''
+				display: block
+				+size(10px)
+				background: white
+				border-radius: 50%
+				margin: 2px
+
+		@for $i from 1 through 10
+			&.skill-#{$i} span:nth-child(n+#{$i + 1})
+				background: $bgcolor
+			
+@media screen and (max-width: 700px)
+	.skills-lockup
+		width: 270px
+		margin: 0 auto
+		
+//contact
+
+
+.contact-section
+	display: block
+	max-width: 750px
+	margin: 50px auto
+
+	input
+		background: none
+		border: solid 2px $teal
+		color: $teal
+		padding: 20px 50px
+		font-size: 18px
+		display: inline-block
+
+		&:focus
+			outline: 0
+			-webkit-box-shadow: none
+			box-shadow: none
+
+		&:active
+			outline: 0
+
+		&[type="text"]
+			border: none
+			border-bottom: solid 2px $teal
+
+		&[type="textarea"]
+			border: none
+			border-bottom: solid 2px $teal
+
+
+
+		&[type="submit"]
+			margin-left: 100px
+			&:active
+				color: white
+				background: $teal
+			&:hover
+				color: white
+				background: $teal
+	
+
+
+	.input-group
+		
+
+
+		display: inline-block
+		margin-right: 20px
+		margin-left: 100px
+		position: relative
+
+		input
+			padding: 15px 0px
+
+		label
+			+position(absolute, 50% null null 0px)
+			+transform(translateY(-50%))
+			font:
+				family: 'Open Sans', sans-serif
+				style: italic
+				size: 18px
+			color: #999
+			pointer-events: none
+			+transition
+
+		input:focus + label
+			top: -10px
+			font-size: 12px
+			color: #aaa
+
+		input:not(:empty) + label
+			top: -10px
+			font-size: 12px
+			color: #aaa
+
+	@media screen and (max-width: 700px)
+		.input-group
+			margin-bottom: 5px
+			
+
+
+
+
+	.social-links
+		max-width: 700px
+		margin: 0px auto 50px
+		+display(flex)
+		+justify-content(space-around)
+		
+
+		a
+			display: block
+			color: $teal
+			+size(50px)
+			text-align: center
+			line-height: 50px
+			background: $bgcolor
+			border-radius: 50%
+			font-size: 28px
+			+transition
+
+			&:hover
+				+transform(scale(1.2))
+
+	.bar
+		width: 250px
+		height: 0px
+		border-top: 4px solid $teal
+		margin: 0px auto 70px
+
+	.big-link
+		color: lighten($lightGray, 50%)
+		display: flex
+		+align-items(center)
+		margin-bottom: 70px
+		font:
+			size: 60px
+			weight: 300
+		line-height: 1
+		
+
+		&:hover
+			color: $coral
+
+		@media screen and (max-width: 800px)
+			
+			display: flex
+			justify-content: center
+			font:
+				size: 32px
+			
+		@media screen and (max-width: 640px)
+
+			display: flex
+			justify-content: center
+			font:
+				size: 25px
+
+.copyright
+	display: flex
+	text-align: center
+	justify-content: center
+	background: $darkgray
+	font-size: 10px
+	color: $white
+	padding-bottom: 20px
+
+	a
+		&:hover
+			color: $coral
+
+
+//smaller screen
+
+@media screen and (max-width: 700px)
+	#container
+		width: auto
+	.column
+		float: none
+		width: auto
+	.socialButtons
+		float: none
+		margin-top: none
+	div.connect
+		float: none
+	.copyright
+		padding-top: 20px
+	span
+		display: none
+
+	nav
+		flex-direction: column
+		text-align: center
+	h1
+		font-size: 40px
+		clear: both
+	h2
+		font-size: 20px
+		padding-top: 20px
+		clear: both
+	p
+		font-size: 16px
+
+	.project-lockup
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		max-width: 80%
+		max-height: 80%
+		margin: 50px auto
+
+	.back-arrow
+		display: inline
+		height: 25px
+		width: 25px
+		padding-left: 50px
+		padding-top: 25px
+
+
+	
+@media screen and (max-width: 640px)
+
+	.project-lockup
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		max-width: 90%
+		max-height: 90%
+		margin: 50px auto
+
+	p
+		font-size: 12px
+		
+	
+
+
+
+
+
+
+

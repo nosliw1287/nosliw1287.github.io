@@ -354,7 +354,7 @@ a:hover {
 .hero-image {
   position: relative;
   height: 960px;
-  background-image: url("./images/simon.JPG");
+  background-image: url("./images/simon.png");
   background-opacity: 0.3;
   background-size: cover;
   background-position: top center;
@@ -650,7 +650,7 @@ a:hover {
   float: left;
   position: relative;
   overflow: hidden;
-  background-image: url("./images/portfolio/2.jpg");
+  background-image: url("./images/portfolio/2.JPG");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

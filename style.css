@@ -1240,6 +1240,20 @@ a:hover {
     padding-left: 50px;
     padding-top: 25px;
   }
+
+  .kwmlogo {
+    height: 200px;
+    width: 673px;
+    margin-top: -20%;
+    margin-left: 2%;
+  }
+
+  .fore-bird {
+    width: 301px;
+    height: 200px;
+    margin-left: -35%;
+    margin-top: -125%;
+  }
 }
 @media screen and (max-width: 640px) {
   .project-lockup {
@@ -1253,6 +1267,21 @@ a:hover {
 
   p {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .kwmlogo {
+    height: 200px;
+    width: 673px;
+    margin-top: -50%;
+    margin-left: 10%;
+  }
+
+  .fore-bird {
+    width: 301px;
+    height: 200px;
+    margin-left: -50%;
+    margin-top: -75%;
   }
 }
 

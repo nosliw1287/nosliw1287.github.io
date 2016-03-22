@@ -252,11 +252,20 @@ body {
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   background: #292626;
+}
+nav h2 {
+  color: #fff;
 }
 nav .logo {
   margin: 5px;
@@ -300,9 +309,10 @@ nav input.text {
 
 h1 {
   font-family: "Lobster", cursive;
-  font-size: 80px;
+  font-size: 60px;
+  padding-left: 5px;
   font-weight: 300;
-  color: #39CCCC;
+  color: #111;
   text-align: center;
   clear: both;
 }
@@ -353,49 +363,23 @@ a:hover {
 
 .hero-image {
   position: relative;
-  height: 960px;
-  background-image: url("./images/simon.png");
+  height: 1080px;
+  max-width: 100%;
+  background-image: url("./images/portfolio-resume-white.png");
   background-opacity: 0.3;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-overflow: hidden;
 }
 
-.kwmlogo {
-  height: 200px;
-  width: 673px;
-  background-image: url("./images/kwm-header-logo-black.png");
-  background-posiiton: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  margin-top: -12%;
-  margin-left: 30%;
+.black-section {
+  background: #111;
 }
 
-.fore-bird {
-  width: 301px;
-  height: 200px;
-  background-image: url("./images/fore-bird.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  position: absolute;
-  left: 50%;
-  margin-left: -35%;
-  margin-top: -45%;
-}
-
-.alt-section {
-  background: #ea6153;
-}
-
-.orange-section {
-  background: #ffa04e;
-}
-
-.teal-section {
-  background: #39CCCC;
+.gray-section {
+  background: #292626;
 }
 
 .work-section {
@@ -403,7 +387,7 @@ a:hover {
 }
 
 .resume-section {
-  background: #39CCCC;
+  background: #292626;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -415,6 +399,91 @@ a:hover {
   clear: both;
   content: "";
   display: table;
+}
+
+.container-resume {
+  background-color: #fff;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+.container-resume h1 {
+  font-family: "Lobster", cursive;
+  font-size: 60px;
+  padding-left: 5px;
+  font-weight: 300;
+  color: #111;
+  text-align: center;
+  clear: both;
+}
+.container-resume h3 {
+  color: #111;
+  font-size: 18px;
+  padding-top: 50px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.container-resume h4 {
+  color: #111;
+  font-variant: small-caps;
+}
+.container-resume p {
+  padding-left: 50px;
+}
+
+.small-caps {
+  font-size: 25px;
+  font-variant: small-caps;
+}
+
+.resume-bar {
+  width: 250px;
+  height: 0px;
+  border-top: 2px solid #111;
+  margin: 0px auto 10px;
+}
+
+.columns {
+  max-width: 700px;
+  padding-left: 50px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+
+.columns2 {
+  max-width: 700px;
+  margin-left: 33px;
+  padding-left: 50px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
 }
 
 .thumb-wrap {
@@ -491,7 +560,7 @@ a:hover {
   right: 100%;
   bottom: 0px;
   height: 100%;
-  background: rgba(234, 97, 83, 0.9);
+  background: rgba(51, 51, 51, 0.9);
   text-align: center;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -577,7 +646,7 @@ a:hover {
   right: 100%;
   bottom: 0px;
   height: 100%;
-  background: rgba(234, 97, 83, 0.9);
+  background: rgba(51, 51, 51, 0.9);
   text-align: center;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -663,7 +732,7 @@ a:hover {
   right: 100%;
   bottom: 0px;
   height: 100%;
-  background: rgba(234, 97, 83, 0.9);
+  background: rgba(51, 51, 51, 0.9);
   text-align: center;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -750,7 +819,7 @@ a:hover {
   right: 100%;
   bottom: 0px;
   height: 100%;
-  background: rgba(234, 97, 83, 0.9);
+  background: rgba(51, 51, 51, 0.9);
   text-align: center;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -837,7 +906,7 @@ a:hover {
   right: 100%;
   bottom: 0px;
   height: 100%;
-  background: rgba(234, 97, 83, 0.9);
+  background: rgba(51, 51, 51, 0.9);
   text-align: center;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
@@ -909,6 +978,7 @@ a:hover {
   height: 25px;
   width: 25px;
   padding-left: 50px;
+  color: #fff;
 }
 
 .back-arrow {
@@ -1294,6 +1364,7 @@ a:hover {
   nav {
     flex-direction: column;
     text-align: center;
+    height: 60px;
   }
 
   h1 {
@@ -1328,18 +1399,8 @@ a:hover {
     padding-top: 25px;
   }
 
-  .kwmlogo {
-    height: 200px;
-    width: 673px;
-    margin-top: -20%;
-    margin-left: 2%;
-  }
-
-  .fore-bird {
-    width: 301px;
-    height: 200px;
-    margin-left: -35%;
-    margin-top: -125%;
+  .hero-image {
+    background-image: url("./images/socialmediapic1-01.png");
   }
 }
 @media screen and (max-width: 640px) {
@@ -1356,20 +1417,3 @@ a:hover {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 1000px) {
-  .kwmlogo {
-    height: 200px;
-    width: 673px;
-    margin-top: -50%;
-    margin-left: 10%;
-  }
-
-  .fore-bird {
-    width: 301px;
-    height: 200px;
-    margin-left: -50%;
-    margin-top: -100%;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */

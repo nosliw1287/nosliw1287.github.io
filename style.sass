@@ -67,12 +67,24 @@ body
 	width: 100%
 
 nav
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 9999
+	height: 50px
 	display: flex
 	align-items: center
 	justify-content: space-between
 	width: 100%
 	background: $darkgray
-	
+
+
+
+
+	h2
+		color: $white
+
 
 	.logo
 		margin: 5px
@@ -89,16 +101,19 @@ nav
 			justify-content: space-between
 
 	input.text
-		margin: 10px 
+		margin: 10px
 
-	
+
 
 .navbar
 	color: lighten($lighterGray, 25%)
 	font-size: 15px
 	text-decoration: none
 
-	
+
+
+
+
 .navbar:hover
 	color: $coral
 
@@ -117,13 +132,14 @@ nav
 
 h1
 	font-family: 'Lobster', cursive
-	font-size: 80px
+	font-size: 60px
+	padding-left: 5px
 	font-weight: 300
-	color: $teal
+	color: $black
 	text-align: center
 	clear: both
-	
-	
+
+
 h2
 	font-family: 'Open Sans', sans-serif
 	font-size: 36px
@@ -131,7 +147,7 @@ h2
 	text-align: center
 	clear: both
 	margin-top: -60px
-	
+
 
 h3
 	color: $teal
@@ -167,65 +183,30 @@ a
 
 .hero-image
 	position: relative
-	height: 960px
-	background: 
-		image: url('./images/simon.png')
+	height: 1080px
+	max-width: 100%
+	background:
+		image: url('./images/portfolio-resume-white.png')
 		opacity: .3
 		size: cover
-		position: top center
+		position: center center
 		attachment: fixed
 		repeat: no-repeat
-
-.kwmlogo
-	height: 200px
-	width: 673px
-	
-	background:
-	
-		image: url('./images/kwm-header-logo-black.png')
-		posiiton: center
-		
-		repeat: no-repeat
-	position: absolute
-	top: 50%
-	margin-top: -12%
-	margin-left: 30%
+		overflow: hidden
 
 
-.fore-bird
-	width: 301px
-	height: 200px
-	background:
-		
-		image: url('./images/fore-bird.png')
-		repeat: no-repeat
-		position: top left
-		
-	position: absolute
-	left: 50%
-	
 
-	//margin-left: -650px
-	//margin-top: -750px
+.black-section
+	background: $black
 
-	margin-left: -35%
-	margin-top: -45%
-
-
-.alt-section
-	background: $coral
-
-.orange-section
-	background: lighten($orange, 10%)
-
-.teal-section
-	background: $teal
+.gray-section
+	background: $darkgray
 
 .work-section
 	overflow-x: hidden
 
 .resume-section
-	background: $teal
+	background: $darkgray
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -233,8 +214,62 @@ a
 	margin: 0px auto
 	margin-bottom: 20px
 	+clearfix
-	
-		
+
+	//resume-section
+.container-resume
+	background-color: $white
+
+	padding-bottom: 30px
+	padding-top: 30px
+	margin-bottom: 50px
+
+	h1
+		font-family: 'Lobster', cursive
+		font-size: 60px
+		padding-left: 5px
+
+		font-weight: 300
+		color: $black
+		text-align: center
+		clear: both
+	h3
+		color: $black
+		font-size: 18px
+		padding-top: 50px
+		padding-top: 0px
+		margin-top: 0px
+
+	h4
+		color: $black
+		font-variant: small-caps
+	p
+		padding-left: 50px
+
+.small-caps
+	font-size: 25px
+	font-variant: small-caps
+
+.resume-bar
+	width: 250px
+	height: 0px
+	border-top: 2px solid $black
+	margin: 0px auto 10px
+
+.columns
+	max-width: 700px
+	padding-left: 50px
+	+display(flex)
+	+justify-content(space-between)
+
+.columns2
+	max-width: 700px
+	margin-left: 33px
+	padding-left: 50px
+	+display(flex)
+	+justify-content(space-between)
+
+
+
 .thumb-wrap
 	width: 50%
 	float: left
@@ -270,11 +305,11 @@ a
 			+size(40px)
 			cursor: pointer
 			opacity: 0.5
-		
+
 			&:hover
 				opacity: 1
 
-		
+
 
 
 
@@ -290,10 +325,10 @@ a
 		width: 25%
 		height: 150px
 		float: left
-		
+
 		position: relative
 		overflow: hidden
-	
+
 		background-image: url('./images/career-fair.png')
 		background-position: center center
 		background-repeat: no-repeat
@@ -305,7 +340,7 @@ a
 		.overlay
 			+position(absolute 100% 0px null 0px)
 			height: 100%
-			background: fade-out($coral, 0.1)
+			background: fade-out($lightGray, 0.1)
 			text-align: center
 			+transition
 			+display(flex)
@@ -327,7 +362,7 @@ a
 			width: 50%
 			padding-top: 20%
 
-			
+
 		&:hover .overlay
 			+position(absolute 0% 0px null 0px)
 			+transform(rotateX(0deg))
@@ -339,7 +374,7 @@ a
 		float: left
 		position: relative
 		overflow: hidden
-		
+
 		background-image: url('./images/eventflyers/advertplain.png')
 		background-position: center center
 		background-repeat: no-repeat
@@ -349,7 +384,7 @@ a
 		.overlay
 			+position(absolute 100% 0px null 0px)
 			height: 100%
-			background: fade-out($coral, 0.1)
+			background: fade-out($lightGray, 0.1)
 			text-align: center
 			+transition
 			+display(flex)
@@ -371,7 +406,7 @@ a
 			width: 50%
 			padding-top: 20%
 
-			
+
 		&:hover .overlay
 			+position(absolute 0% 0px null 0px)
 			+transform(rotateX(0deg))
@@ -383,7 +418,7 @@ a
 		float: left
 		position: relative
 		overflow: hidden
-		
+
 		background-image: url('./images/portfolio/7.jpg')
 		background-position: center center
 		background-repeat: no-repeat
@@ -393,7 +428,7 @@ a
 		.overlay
 			+position(absolute 100% 0px null 0px)
 			height: 100%
-			background: fade-out($coral, 0.1)
+			background: fade-out($lightGray, 0.1)
 			text-align: center
 			+transition
 			+display(flex)
@@ -415,7 +450,7 @@ a
 			width: 50%
 			padding-top: 20%
 
-			
+
 		&:hover .overlay
 			+position(absolute 0% 0px null 0px)
 			+transform(rotateX(0deg))
@@ -431,7 +466,7 @@ a
 	float: left
 	position: relative
 	overflow: hidden
-	
+
 	background-image: url('./images/tshirt/HoodieMockUp_StudentSummitBig.png')
 	background-position: center center
 	background-repeat: no-repeat
@@ -441,7 +476,7 @@ a
 	.overlay
 		+position(absolute 100% 0px null 0px)
 		height: 100%
-		background: fade-out($coral, 0.1)
+		background: fade-out($lightGray, 0.1)
 		text-align: center
 		+transition
 		+display(flex)
@@ -463,7 +498,7 @@ a
 		width: 50%
 		padding-top: 20%
 
-		
+
 	&:hover .overlay
 		+position(absolute 0% 0px null 0px)
 		+transform(rotateX(0deg))
@@ -476,7 +511,7 @@ a
 	float: left
 	position: relative
 	overflow: hidden
-		
+
 	background-image: url('./images/alanfest/alanfest-Brochure3-2.png')
 	background-position: center center
 	background-repeat: no-repeat
@@ -486,7 +521,7 @@ a
 	.overlay
 		+position(absolute 100% 0px null 0px)
 		height: 100%
-		background: fade-out($coral, 0.1)
+		background: fade-out($lightGray, 0.1)
 		text-align: center
 		+transition
 		+display(flex)
@@ -508,7 +543,7 @@ a
 		width: 50%
 		padding-top: 20%
 
-			
+
 	&:hover .overlay
 		+position(absolute 0% 0px null 0px)
 		+transform(rotateX(0deg))
@@ -518,7 +553,8 @@ a
 	height: 25px
 	width: 25px
 	padding-left: 50px
-	
+	color: $white
+
 
 .back-arrow
 	display: inline
@@ -536,7 +572,7 @@ a
 	max-width: 720px
 	margin: 0 auto
 
-	
+
 	.label
 		text-align: center
 		text-transform: uppercase
@@ -544,16 +580,16 @@ a
 		letter-spacing: .5em
 
 
-	
-	
+
+
 
 	.face-lockup
 		display: flex
 		justify-content: space-around
 		+align-items(center)
-		
-		
-		
+
+
+
 
 		.avatar
 			+size(200px)
@@ -582,7 +618,7 @@ a
 
 .skills-lockup
 	max-width: 600px
-	margin: 50px auto 
+	margin: 50px auto
 	padding-left: 75px
 	color: lighten($lightGray, 30%)
 	+clearfix()
@@ -594,7 +630,7 @@ a
 	.skill-icons
 		font-size: 0
 		margin: 0px 0 30px
-		
+
 		span
 			display: inline-block
 			+size(14px)
@@ -614,12 +650,17 @@ a
 		@for $i from 1 through 10
 			&.skill-#{$i} span:nth-child(n+#{$i + 1})
 				background: $bgcolor
-			
+
 @media screen and (max-width: 700px)
 	.skills-lockup
 		width: 270px
 		margin: 0 auto
-		
+
+
+
+
+
+
 //contact
 
 
@@ -662,11 +703,11 @@ a
 			&:hover
 				color: white
 				background: $teal
-	
+
 
 
 	.input-group
-		
+
 
 
 		display: inline-block
@@ -701,7 +742,7 @@ a
 	@media screen and (max-width: 700px)
 		.input-group
 			margin-bottom: 5px
-			
+
 
 
 
@@ -711,7 +752,7 @@ a
 		margin: 0px auto 50px
 		+display(flex)
 		+justify-content(space-around)
-		
+
 
 		a
 			display: block
@@ -742,18 +783,18 @@ a
 			size: 60px
 			weight: 300
 		line-height: 1
-		
+
 
 		&:hover
 			color: $coral
 
 		@media screen and (max-width: 800px)
-			
+
 			display: flex
 			justify-content: center
 			font:
 				size: 32px
-			
+
 		@media screen and (max-width: 640px)
 
 			display: flex
@@ -796,6 +837,7 @@ a
 	nav
 		flex-direction: column
 		text-align: center
+		height: 60px
 	h1
 		font-size: 40px
 		clear: both
@@ -821,23 +863,13 @@ a
 		padding-left: 50px
 		padding-top: 25px
 
-
-	.kwmlogo
-		height: 200px
-		width: 673px
-		margin-top: -20%
-		margin-left: 2%
+	.hero-image
+		background:
+			image: url('./images/socialmediapic1-01.png')
 
 
-	.fore-bird
-		width: 301px
-		height: 200px
-		margin-left: -35%
-		margin-top: -125%
-	
 
 
-	
 @media screen and (max-width: 640px)
 
 	.project-lockup
@@ -850,23 +882,3 @@ a
 
 	p
 		font-size: 12px
-
-
-
-	
-		
-@media screen and (max-width: 1000px)
-
-	.kwmlogo
-		height: 200px
-		width: 673px
-		margin-top: -50%
-		margin-left: 10%
-
-
-	.fore-bird
-		width: 301px
-		height: 200px
-		margin-left: -50%
-		margin-top: -100%
-
